@@ -4,7 +4,7 @@ const express = require('express')
 const app = express()
 const connect = require('./db/db')
 connect()
-const userRoutes = require('./routes/userRoutes')
+const captainRoutes = require('./routes/captainRoutes')
 const cookieParser = require('cookie-parser')
 const rabbitMq = require('./service/rabbit')
 
@@ -16,6 +16,6 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
 
 
-app.use('/', userRoutes)
+app.use('/', captainRoutes)
 
 module.exports = app

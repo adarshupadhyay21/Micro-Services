@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 
 function connect() {
-    mongoose.connect(process.env.MONGODB_URL).then(() => {
-        console.log('User service connected to MongoDB');
+    mongoose.connect(process.env.MONGO_URL).then(() => {
+        console.log('captain service connected to MongoDB');
     }).catch(err => {
         console.log(err);
     });
